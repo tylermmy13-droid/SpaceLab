@@ -96,16 +96,21 @@
     letter-spacing: -0.025em;
   }
 
+  /* ===== 中文排版优化 ===== */
   :global(html[lang="zh-CN"]) .home-hero-title {
     max-width: 980px;
-    font-size: clamp(54px, 6.45vw, 106px);
-    line-height: 1.25;
-    letter-spacing: -0.025em;
+    font-size: clamp(52px, 6.3vw, 102px);
+    font-weight: 600;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    hanging-punctuation: first allow-end;
   }
 
   :global(html[lang="zh-CN"]) .home-hero-summary {
-    line-height: 1.7;
-    max-width: 540px;
+    max-width: 560px;
+    font-weight: 400;
+    line-height: 1.85;
+    letter-spacing: 0.015em;
   }
 
   :global(html[lang="zh-CN"]) .home-hero-content {

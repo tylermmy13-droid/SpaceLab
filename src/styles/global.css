@@ -22,19 +22,20 @@
   --nav-shadow-light: 0 18px 56px rgba(30, 31, 30, 0.10), inset 0 1px 0 rgba(255, 255, 255, 0.6);
   --nav-hover-bg-light: rgba(30, 31, 30, 0.08);
 
-  /* ===== 字体栈 — 中英文混排 ===== */
+  /* ===== 字体栈 — 标题衬线 / 正文非衬线 ===== */
   /* ─── Font stacks ───
-   * Chinese titles: Local Source Han Serif CN Bold → system fallback
-   * Chinese body: Google Fonts CDN (Noto Sans SC) → system fallback
-   * English titles: Local DM Serif Display → system fallback */
-  --font-title: "Source Han Serif CN Bold", "DM Serif Display", "Songti SC", "STSong", "SimSun", Georgia, "Times New Roman", serif;
-  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "Heiti SC", sans-serif;
+   * Chinese titles: Noto Serif SC (Google Fonts, 400-700) → local Source Han Serif CN Bold → system fallback
+   * Chinese body: Noto Sans SC (Google Fonts) → PingFang SC → system fallback
+   * English titles: local DM Serif Display → Georgia → serif
+   * English body: Inter (Google Fonts) → SF Pro → system fallback */
+  --font-title: "DM Serif Display", "Noto Serif SC", "Source Han Serif CN Bold", "Songti SC", "STSong", Georgia, "Times New Roman", serif;
+  --font-body: "Inter", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", -apple-system, sans-serif;
 }
 
-/* English font overrides */
-html[lang="en"] {
-  --font-title: "DM Serif Display", "Source Han Serif CN Bold", Georgia, "Times New Roman", serif;
-  --font-body: "Noto Sans SC", "SF Pro Display", "SF Pro Text", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+/* Language-specific font tuning */
+html[lang="zh-CN"] {
+  --font-title: "Noto Serif SC", "Source Han Serif CN Bold", "Songti SC", "STSong", "SimSun", "DM Serif Display", Georgia, serif;
+  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "Inter", sans-serif;
 }
 
 @font-face {
@@ -173,6 +174,32 @@ html[lang="zh-CN"] .nav {
 }
 html[lang="en"] .nav {
   letter-spacing: 0.015em;
+}
+
+/* ===== 中文排版优化 ===== */
+/* 中文标题不使用英文衬线的负字距，改用微正字距，更开阔 */
+html[lang="zh-CN"] .section-title,
+html[lang="zh-CN"] .publication-title,
+html[lang="zh-CN"] .detail-hero h1,
+html[lang="zh-CN"] .card h3,
+html[lang="zh-CN"] .about-copy h1,
+html[lang="zh-CN"] .prose h4 {
+  letter-spacing: 0.01em;
+}
+
+/* 中文导语与正文行高加大，提升可读性 */
+html[lang="zh-CN"] .publication-lede {
+  letter-spacing: 0.01em;
+  line-height: 1.55;
+}
+
+html[lang="zh-CN"] .about-label {
+  letter-spacing: 0.02em;
+}
+
+/* 中文卡片正文行高 */
+html[lang="zh-CN"] .card p {
+  line-height: 1.7;
 }
 
 /* ===== 深色/浅色模式变体 ===== */
