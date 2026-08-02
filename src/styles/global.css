@@ -24,18 +24,19 @@
 
   /* ===== 字体栈 — 标题衬线 / 正文非衬线 ===== */
   /* ─── Font stacks ───
-   * Chinese titles: Noto Serif SC (Google Fonts, 400-700) → local Source Han Serif CN Bold → system fallback
-   * Chinese body: Noto Sans SC (Google Fonts) → PingFang SC → system fallback
-   * English titles: local DM Serif Display → Georgia → serif
-   * English body: Inter (Google Fonts) → SF Pro → system fallback */
+   * 统一原则：拉丁字符在所有语言环境下都使用同一字体渲染。
+   * CSS font-family 逐字符回退：拉丁字母优先匹配 DM Serif Display / Inter，
+   * 汉字自动回退到 Noto Serif SC / Noto Sans SC。
+   * Titles: DM Serif Display (Anthropic serif) → Noto Serif SC (CJK) → system serif
+   * Body: Inter → Noto Sans SC (CJK) → PingFang SC → system sans-serif */
   --font-title: "DM Serif Display", "Noto Serif SC", "Source Han Serif CN Bold", "Songti SC", "STSong", Georgia, "Times New Roman", serif;
   --font-body: "Inter", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", -apple-system, sans-serif;
 }
 
-/* Language-specific font tuning */
+/* Chinese-specific tuning: same Latin fonts first, CJK fallback adjusted */
 html[lang="zh-CN"] {
-  --font-title: "Noto Serif SC", "Source Han Serif CN Bold", "Songti SC", "STSong", "SimSun", "DM Serif Display", Georgia, serif;
-  --font-body: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", "Inter", sans-serif;
+  --font-title: "DM Serif Display", "Noto Serif SC", "Source Han Serif CN Bold", "Songti SC", "STSong", "SimSun", Georgia, serif;
+  --font-body: "Inter", "Noto Sans SC", "PingFang SC", "Microsoft YaHei", "Hiragino Sans GB", sans-serif;
 }
 
 @font-face {
@@ -43,6 +44,15 @@ html[lang="zh-CN"] {
   src: url("/assets/fonts/dm-serif-display-latin-400-normal.ttf") format("truetype");
   font-display: optional;
   font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "DM Serif Display";
+  src: url("/assets/fonts/dm-serif-display-latin-400-italic.woff2") format("woff2"),
+       url("/assets/fonts/dm-serif-display-latin-400-italic.ttf") format("truetype");
+  font-display: optional;
+  font-style: italic;
   font-weight: 400;
 }
 
@@ -55,7 +65,29 @@ html[lang="zh-CN"] {
 }
 
 * { box-sizing: border-box; }
+
+/* Anthropic signature: italic serif keywords inside headings (English only) */
 em { font-style: normal; }
+h1 em, h2 em, h3 em,
+.section-title em,
+.publication-title em,
+.collection-title em,
+.home-hero-title em,
+.detail-hero h1 em {
+  font-style: italic;
+  font-family: "DM Serif Display", "Noto Serif SC", "Source Han Serif CN Bold", Georgia, serif;
+}
+
+/* 中文排版不使用斜体，关键词保持正体衬线 */
+html[lang="zh-CN"] h1 em,
+html[lang="zh-CN"] h2 em,
+html[lang="zh-CN"] h3 em,
+html[lang="zh-CN"] .section-title em,
+html[lang="zh-CN"] .publication-title em,
+html[lang="zh-CN"] .collection-title em,
+html[lang="zh-CN"] .home-hero-title em {
+  font-style: normal;
+}
 
 html { scroll-behavior: smooth; }
 
