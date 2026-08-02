@@ -1,8 +1,8 @@
 ---
 title: "Vascular injury, repair, and remodeling"
 titleZh: "血管损伤、修复与重构"
-description: "Mechanistic studies of vascular injury response, endothelial repair, smooth muscle cell plasticity, and pathological remodeling."
-descriptionZh: "血管损伤反应、内皮修复、平滑肌细胞可塑性及病理性重构的机制研究。"
+description: "How blood vessels respond to injury, and why repair sometimes fails."
+descriptionZh: "血管如何应对损伤，以及修复为何有时会失败。"
 pubDate: 2026-07-01
 platform: "Research Area"
 platformZh: "研究方向"

@@ -1,8 +1,8 @@
 ---
 title: "Cardiovascular multi-organ interactions"
 titleZh: "心血管多器官互作"
-description: "Investigating bidirectional interactions between the cardiovascular system and other organs, with focus on the heart-kidney axis and cardiometabolic disease mechanisms."
-descriptionZh: "心血管系统与其他器官之间的双向相互作用研究，聚焦心肾轴与心血管代谢疾病机制。"
+description: "How the heart and kidneys affect each other in health and disease."
+descriptionZh: "心脏与肾脏在健康与疾病中如何相互影响。"
 pubDate: 2026-07-03
 platform: "Research Area"
 platformZh: "研究方向"

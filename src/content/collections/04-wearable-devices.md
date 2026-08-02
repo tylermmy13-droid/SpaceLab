@@ -1,8 +1,8 @@
 ---
 title: "Wearable cardiovascular monitoring and digital health"
 titleZh: "可穿戴心血管监测与数字健康"
-description: "Developing wearable sensors and signal-processing methods for continuous cardiovascular monitoring and data-driven health research."
-descriptionZh: "开发可穿戴传感器与信号处理方法，用于连续心血管监测与数据驱动的健康研究。"
+description: "Sensors and methods for continuous cardiovascular monitoring."
+descriptionZh: "用于心血管连续监测的传感器与方法。"
 pubDate: 2026-07-04
 platform: "Research Area"
 platformZh: "研究方向"

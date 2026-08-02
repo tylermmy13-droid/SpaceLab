@@ -3,7 +3,7 @@
   <div class="home-hero-sticky">
     <div class="home-hero-content">
       <h1 class="home-hero-title" data-en="Cardiovascular research,&lt;br /&gt;grounded in clinical questions." data-zh="从临床问题出发的&lt;br /&gt;心血管医学研究">Cardiovascular research,<br />grounded in clinical questions.</h1>
-      <p class="home-hero-summary" data-en="Zhang Lab studies vascular injury and repair, myocardial remodeling, multi-organ interactions, wearable monitoring, and data science for cardiovascular medicine. We connect clinical observations, experimental models, and reproducible data analysis to address questions in prevention, diagnosis, and treatment." data-zh="张力课题组围绕血管损伤与修复、心肌重构、多器官互作、可穿戴监测及心血管医学数据科学开展研究。我们结合临床观察、实验模型与可重复的数据分析，探讨疾病预防、诊断与治疗中的问题。">Zhang Lab studies vascular injury and repair, myocardial remodeling, multi-organ interactions, wearable monitoring, and data science for cardiovascular medicine. We connect clinical observations, experimental models, and reproducible data analysis to address questions in prevention, diagnosis, and treatment.</p>
+      <p class="home-hero-tagline" data-en="Zhang Lab focuses on cardiovascular medicine and translational research." data-zh="张力课题组聚焦于心血管医学和转化研究">Zhang Lab focuses on cardiovascular medicine and translational research.</p>
     </div>
 
     <div class="home-hero-media" data-home-hero-media>
@@ -72,20 +72,20 @@
   .home-hero-content {
     position: relative;
     z-index: 2;
-    display: grid;
-    grid-template-columns: minmax(0, 1.28fr) minmax(280px, 0.72fr);
-    align-items: end;
-    gap: clamp(48px, 9vw, 160px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     width: min(calc(100% - 96px), 1520px);
     height: 100%;
     margin: 0 auto;
-    padding: clamp(196px, 24vh, 280px) 0 clamp(250px, 29vh, 360px);
+    padding-bottom: clamp(240px, 26vh, 340px);
     opacity: var(--hero-copy-opacity, 1);
     transition: opacity 80ms linear;
   }
 
   .home-hero-title {
-    align-self: end;
     max-width: 950px;
     margin: 0;
     color: var(--ink);
@@ -97,33 +97,26 @@
   }
 
   /* ===== 中文排版优化 ===== */
+  /* 中文 hero 标题用 700（Noto Serif SC Bold），与英文衬线体相称 */
   :global(html[lang="zh-CN"]) .home-hero-title {
     max-width: 980px;
     font-size: clamp(52px, 6.3vw, 102px);
-    font-weight: 600;
-    line-height: 1.22;
+    font-weight: 700;
+    line-height: 1.32;
     letter-spacing: 0.02em;
     hanging-punctuation: first allow-end;
   }
 
-  :global(html[lang="zh-CN"]) .home-hero-summary {
-    max-width: 560px;
-    font-weight: 400;
-    line-height: 1.85;
-    letter-spacing: 0.015em;
+  :global(html[lang="zh-CN"]) .home-hero-tagline {
+    font-weight: 500;
+    letter-spacing: 0.02em;
   }
 
-  :global(html[lang="zh-CN"]) .home-hero-content {
-    transform: translateY(clamp(-84px, -6vh, -42px));
-  }
-
-  .home-hero-summary {
-    align-self: end;
-    max-width: 510px;
-    margin: 0;
+  .home-hero-tagline {
+    margin: clamp(26px, 3vh, 40px) 0 0;
     color: var(--ink);
     font-family: var(--font-body);
-    font-size: clamp(18px, 1.55vw, 25px);
+    font-size: clamp(19px, 1.5vw, 26px);
     font-weight: 500;
     line-height: 1.55;
     letter-spacing: -0.01em;
@@ -159,16 +152,8 @@
 
   @media (max-width: 900px) {
     .home-hero-content {
-      grid-template-columns: 1fr;
-      align-content: end;
-      gap: 30px;
       width: min(calc(100% - 56px), 760px);
-      padding-top: 170px;
-      padding-bottom: 180px;
-    }
-
-    :global(html[lang="zh-CN"]) .home-hero-content {
-      transform: none;
+      padding-bottom: clamp(180px, 22vh, 280px);
     }
 
     .home-hero-title {
@@ -178,11 +163,10 @@
 
     :global(html[lang="zh-CN"]) .home-hero-title {
       font-size: clamp(48px, 9vw, 78px);
-      line-height: 1.16;
+      line-height: 1.26;
     }
 
-    .home-hero-summary {
-      max-width: 600px;
+    .home-hero-tagline {
       font-size: clamp(18px, 2.8vw, 23px);
     }
   }
@@ -194,8 +178,7 @@
 
     .home-hero-content {
       width: calc(100% - 40px);
-      padding-top: 130px;
-      padding-bottom: 160px;
+      padding-bottom: 140px;
     }
 
     .home-hero-title {
@@ -204,7 +187,7 @@
       letter-spacing: -0.04em;
     }
 
-    .home-hero-summary {
+    .home-hero-tagline {
       font-size: 17px;
       line-height: 1.5;
     }

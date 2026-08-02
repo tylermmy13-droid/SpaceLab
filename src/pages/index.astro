@@ -25,7 +25,7 @@ const collectionItems = (await getCollection('collections')).filter((item) => !i
             <h2 class="section-title" data-en="Latest &lt;em&gt;News&lt;/em&gt;" data-zh="最新&lt;em&gt;动态&lt;/em&gt;">Latest <em>News</em></h2>
             <a class="button section-cta" href="/news/" data-en="All News" data-zh="全部动态">All News <span aria-hidden="true">&rarr;</span></a>
           </div>
-          <p class="section-copy" data-en="Laboratory announcements, publications, and team news." data-zh="课题组公告、论文发表与团队动态。">Laboratory announcements, publications, and team news.</p>
+          <p class="section-copy" data-en="Latest from the lab." data-zh="课题组最新消息。">Latest from the lab.</p>
         </div>
         <div class="card-grid">{newsItems.map((item) => <NewsCard item={item} />)}</div>
       </div>
@@ -39,7 +39,7 @@ const collectionItems = (await getCollection('collections')).filter((item) => !i
             <h2 class="section-title" data-en="Research &lt;em&gt;Areas&lt;/em&gt;" data-zh="研究&lt;em&gt;方向&lt;/em&gt;">Research <em>Areas</em></h2>
             <a class="button section-cta" href="/collections/" data-en="All Research Areas" data-zh="全部方向">All Research Areas <span aria-hidden="true">&rarr;</span></a>
           </div>
-          <p class="section-copy" data-en="Vascular biology, cardiac repair, multi-organ interactions, wearable monitoring, and data-driven cardiovascular research." data-zh="血管生物学、心肌修复、多器官互作、可穿戴监测及数据驱动的心血管研究。">Vascular biology, cardiac repair, multi-organ interactions, wearable monitoring, and data-driven cardiovascular research.</p>
+          <p class="section-copy" data-en="Our current research directions." data-zh="我们目前的研究方向。">Our current research directions.</p>
         </div>
         <div class="card-grid">{collectionItems.map((item) => <CollectionCard item={item} />)}</div>
       </div>
@@ -53,7 +53,7 @@ const collectionItems = (await getCollection('collections')).filter((item) => !i
             <h2 class="section-title" data-en="Representative &lt;em&gt;Publications&lt;/em&gt;" data-zh="代表性&lt;em&gt;论文&lt;/em&gt;">Representative <em>Publications</em></h2>
             <a class="button section-cta" href="/publications/" data-en="All Publications" data-zh="全部论文">All Publications <span aria-hidden="true">&rarr;</span></a>
           </div>
-          <p class="section-copy" data-en="Selected publications from the laboratory." data-zh="课题组代表性论文。">Selected publications from the laboratory.</p>
+          <p class="section-copy" data-en="Selected publications from the lab." data-zh="课题组代表性论文。">Selected publications from the lab.</p>
         </div>
         <div class="card-grid">{publications.map((item) => <PublicationCard item={item} />)}</div>
       </div>

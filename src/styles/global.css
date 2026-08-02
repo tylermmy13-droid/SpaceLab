@@ -48,15 +48,6 @@ html[lang="zh-CN"] {
 }
 
 @font-face {
-  font-family: "DM Serif Display";
-  src: url("/assets/fonts/dm-serif-display-latin-400-italic.woff2") format("woff2"),
-       url("/assets/fonts/dm-serif-display-latin-400-italic.ttf") format("truetype");
-  font-display: optional;
-  font-style: italic;
-  font-weight: 400;
-}
-
-@font-face {
   font-family: "Source Han Serif CN Bold";
   src: url("/assets/fonts/SourceHanSerifCN-Bold.otf") format("opentype");
   font-display: swap;
@@ -66,28 +57,8 @@ html[lang="zh-CN"] {
 
 * { box-sizing: border-box; }
 
-/* Anthropic signature: italic serif keywords inside headings (English only) */
+/* 英文标题关键词不再使用斜体，中英文均保持正体直立 */
 em { font-style: normal; }
-h1 em, h2 em, h3 em,
-.section-title em,
-.publication-title em,
-.collection-title em,
-.home-hero-title em,
-.detail-hero h1 em {
-  font-style: italic;
-  font-family: "DM Serif Display", "Noto Serif SC", "Source Han Serif CN Bold", Georgia, serif;
-}
-
-/* 中文排版不使用斜体，关键词保持正体衬线 */
-html[lang="zh-CN"] h1 em,
-html[lang="zh-CN"] h2 em,
-html[lang="zh-CN"] h3 em,
-html[lang="zh-CN"] .section-title em,
-html[lang="zh-CN"] .publication-title em,
-html[lang="zh-CN"] .collection-title em,
-html[lang="zh-CN"] .home-hero-title em {
-  font-style: normal;
-}
 
 html { scroll-behavior: smooth; }
 
@@ -229,6 +200,11 @@ html[lang="zh-CN"] .about-copy h1,
 html[lang="zh-CN"] .prose h4,
 html[lang="zh-CN"] .home-hero-title {
   font-weight: 600;
+}
+
+/* 中文正文整体适度加粗至 500（Noto Sans SC），与 Inter 英文正文视觉相称 */
+html[lang="zh-CN"] body {
+  font-weight: 500;
 }
 
 /* 中文导语与正文行高加大，提升可读性 */

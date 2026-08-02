@@ -37,7 +37,7 @@ const getInitials = (name: string) => {
     <section class="publication-hero">
       <div class="container publication-hero-inner">
         <h1 class="publication-title" data-en="Our &lt;em&gt;Team&lt;/em&gt;" data-zh="团队成员">Our <em>Team</em></h1>
-        <p class="publication-lede" data-en="Clinicians, researchers, and trainees working across cardiovascular medicine and translational research." data-zh="临床医生、研究人员与在培学生共同开展心血管医学与转化研究。">Clinicians, researchers, and trainees working across cardiovascular medicine and translational research.</p>
+        <p class="publication-lede" data-en="The clinicians, researchers, and trainees in the lab." data-zh="课题组的临床医生、研究人员与在培学生。">The clinicians, researchers, and trainees in the lab.</p>
       </div>
     </section>
 
@@ -168,7 +168,7 @@ const getInitials = (name: string) => {
     position: relative;
     display: flex;
     flex-direction: column;
-    width: 260px;
+    width: 290px;
     border-radius: 20px;
     overflow: hidden;
     background: #e4dbcd;
@@ -204,7 +204,7 @@ const getInitials = (name: string) => {
   }
 
   .member-card-initial {
-    font-size: 42px;
+    font-size: 46px;
     font-weight: 600;
     color: rgba(20, 20, 19, 0.2);
     font-family: "Inter", sans-serif;
@@ -216,7 +216,7 @@ const getInitials = (name: string) => {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 16px 16px 22px;
+    padding: 18px 18px 24px;
     gap: 4px;
     flex: 1;
   }
@@ -225,7 +225,7 @@ const getInitials = (name: string) => {
     margin: 0;
     color: #141413;
     font-family: var(--font-title);
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 600;
     line-height: 1.3;
     letter-spacing: -0.005em;
@@ -235,7 +235,7 @@ const getInitials = (name: string) => {
     margin: 0;
     color: #141413;
     font-family: var(--font-title);
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 400;
     letter-spacing: 0.015em;
     opacity: 0.55;
@@ -246,7 +246,7 @@ const getInitials = (name: string) => {
     margin-top: 8px;
     padding: 5px 16px;
     border-radius: 30px;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.02em;
     line-height: 1.55;
@@ -256,19 +256,19 @@ const getInitials = (name: string) => {
 
   @media (max-width: 900px) {
     .level-cards { gap: 14px; }
-    .member-card { width: 210px; }
-    .member-card-name { font-size: 17px; }
-    .member-card-name-en { font-size: 12px; }
-    .member-card-role { font-size: 12px; padding: 4px 13px; }
+    .member-card { width: 235px; }
+    .member-card-name { font-size: 19px; }
+    .member-card-name-en { font-size: 13px; }
+    .member-card-role { font-size: 13px; padding: 5px 15px; }
   }
 
   @media (max-width: 640px) {
     .level-cards { gap: 10px; }
-    .member-card { width: 165px; }
-    .member-card-name { font-size: 15px; }
-    .member-card-name-en { font-size: 11px; }
-    .member-card-role { font-size: 11px; padding: 3px 10px; }
-    .member-card-initial { font-size: 24px; }
+    .member-card { width: 180px; }
+    .member-card-name { font-size: 16px; }
+    .member-card-name-en { font-size: 12px; }
+    .member-card-role { font-size: 12px; padding: 3px 11px; }
+    .member-card-initial { font-size: 26px; }
   }
 
   /* ===== 在培学生区域 ===== */
@@ -315,16 +315,16 @@ const getInitials = (name: string) => {
   }
 
   :global(.student-card) {
-    width: 180px;
+    width: 200px;
   }
 
   @media (max-width: 1024px) {
-    :global(.student-card) { width: 165px; }
+    :global(.student-card) { width: 180px; }
     .student-grid { gap: 14px; }
   }
 
   @media (max-width: 640px) {
-    :global(.student-card) { width: 155px; }
+    :global(.student-card) { width: 170px; }
     .student-grid { gap: 10px; }
   }
 </style>

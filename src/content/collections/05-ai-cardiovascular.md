@@ -1,8 +1,8 @@
 ---
 title: "Data science and AI for cardiovascular medicine"
 titleZh: "数据科学与人工智能心血管医学"
-description: "Applying computational modeling, machine learning, and statistical methods to cardiovascular imaging, risk prediction, and multi-omics data analysis."
-descriptionZh: "将计算建模、机器学习与统计方法应用于心血管影像、风险预测及多组学数据分析。"
+description: "Computational methods for imaging, risk prediction, and omics data."
+descriptionZh: "应用于影像、风险预测与组学数据的计算方法。"
 pubDate: 2026-07-05
 platform: "Research Area"
 platformZh: "研究方向"
