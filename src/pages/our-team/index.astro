@@ -148,25 +148,27 @@ const getInitials = (name: string) => {
 
   .level-label {
     font-family: var(--font-title);
-    font-size: 26px;
-    font-weight: 450;
+    font-size: 28px;
+    font-weight: 600;
     color: #191919;
-    opacity: 0.75;
+    opacity: 0.78;
   }
 
   .level-cards {
     display: flex;
     justify-content: center;
+    align-items: stretch;
     gap: 20px;
     flex-wrap: wrap;
     width: 100%;
   }
 
-  /* ===== 成员卡片 — 竖版胶囊形状 ===== */
+  /* ===== 成员卡片 — 竖版卡片，统一宽度与比例 ===== */
   .member-card {
     position: relative;
     display: flex;
     flex-direction: column;
+    width: 260px;
     border-radius: 20px;
     overflow: hidden;
     background: #e4dbcd;
@@ -183,7 +185,7 @@ const getInitials = (name: string) => {
 
   .member-card-photo {
     width: 100%;
-    aspect-ratio: 1 / 1.1;
+    aspect-ratio: 1 / 1.02;
     overflow: hidden;
     background: #e8e6dc;
     display: flex;
@@ -202,7 +204,7 @@ const getInitials = (name: string) => {
   }
 
   .member-card-initial {
-    font-size: 36px;
+    font-size: 42px;
     font-weight: 600;
     color: rgba(20, 20, 19, 0.2);
     font-family: "Inter", sans-serif;
@@ -214,15 +216,17 @@ const getInitials = (name: string) => {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 14px 14px 20px;
-    gap: 6px;
+    padding: 16px 16px 22px;
+    gap: 4px;
+    flex: 1;
   }
 
   .member-card-name {
     margin: 0;
     color: #141413;
     font-family: var(--font-title);
-    font-weight: 650;
+    font-size: 20px;
+    font-weight: 600;
     line-height: 1.3;
     letter-spacing: -0.005em;
   }
@@ -231,45 +235,40 @@ const getInitials = (name: string) => {
     margin: 0;
     color: #141413;
     font-family: var(--font-title);
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
     letter-spacing: 0.015em;
+    opacity: 0.55;
   }
 
   .member-card-role {
     display: inline-block;
-    margin-top: 6px;
-    padding: 7px 20px;
+    margin-top: 8px;
+    padding: 5px 16px;
     border-radius: 30px;
-    font-size: 18px;
+    font-size: 13px;
     font-weight: 500;
     letter-spacing: 0.02em;
-    line-height: 1.5;
+    line-height: 1.55;
     white-space: pre-line;
     color: #141413 !important;
   }
 
-  .member-card { width: 250px; }
-  .member-card[data-slug="zhang-li"],
-  .member-card[data-slug="chen-qishan"] { width: 300px; }
-  .member-card-photo { aspect-ratio: 1 / 0.95; }
-  .member-card-name { font-size: 20px; }
-  .member-card-initial { font-size: 42px; }
-
   @media (max-width: 900px) {
     .level-cards { gap: 14px; }
-    .member-card { width: 200px; }
+    .member-card { width: 210px; }
     .member-card-name { font-size: 17px; }
-    .member-card-role { font-size: 14px; padding: 4px 14px; }
+    .member-card-name-en { font-size: 12px; }
+    .member-card-role { font-size: 12px; padding: 4px 13px; }
   }
 
   @media (max-width: 640px) {
     .level-cards { gap: 10px; }
-    .member-card { width: 160px; }
+    .member-card { width: 165px; }
     .member-card-name { font-size: 15px; }
     .member-card-name-en { font-size: 11px; }
-    .member-card-role { font-size: 12px; padding: 3px 10px; }
-    .member-card-initial { font-size: 22px !important; }
+    .member-card-role { font-size: 11px; padding: 3px 10px; }
+    .member-card-initial { font-size: 24px; }
   }
 
   /* ===== 在培学生区域 ===== */
@@ -284,7 +283,7 @@ const getInitials = (name: string) => {
   .students-section-title {
     font-family: var(--font-title);
     font-size: clamp(36px, 4.5vw, 54px);
-    font-weight: 400;
+    font-weight: 600;
     color: #141413;
     letter-spacing: -0.015em;
     margin: 0;
@@ -302,7 +301,7 @@ const getInitials = (name: string) => {
   .student-group-label {
     font-family: var(--font-title);
     font-size: 22px;
-    font-weight: 450;
+    font-weight: 500;
     letter-spacing: 0.04em;
     color: #141413;
     opacity: 0.75;
