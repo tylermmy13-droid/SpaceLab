@@ -208,7 +208,8 @@ html[lang="zh-CN"] body {
 }
 
 /* 中文导语与正文行高加大，提升可读性 */
-html[lang="zh-CN"] .publication-lede {
+html[lang="zh-CN"] .publication-lede,
+html[lang="zh-CN"] .collection-lede {
   letter-spacing: 0.01em;
   line-height: 1.55;
 }
