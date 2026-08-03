@@ -11,8 +11,8 @@ const enName = student.name.split('/')[1]?.trim() || '';
 
 const typeLabels: Record<string, { en: string; zh: string }> = {
   'phd':                { en: 'Ph.D.', zh: '博士研究生' },
-  'academic-master':    { en: 'M.A.Sc.', zh: '学术型硕士' },
-  'professional-master':{ en: 'M.Eng.', zh: '专业型硕士' },
+  'academic-master':    { en: 'M.Phil.', zh: '学术型硕士' },
+  'professional-master':{ en: 'M.Med.', zh: '专业型硕士' },
 };
 const roleLabel = typeLabels[student.type] ?? { en: '', zh: '' };
 ---

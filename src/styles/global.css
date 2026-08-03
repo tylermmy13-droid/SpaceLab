@@ -190,7 +190,7 @@ html[lang="zh-CN"] .prose h4 {
   letter-spacing: 0.01em;
 }
 
-/* 中文标题加粗至 600 — DM Serif Display 仅有 400 字重，
+/* 中文标题加粗至 700 — DM Serif Display 仅有 400 字重，
    此规则不影响英文标题，只让 Noto Serif SC 中文标题与英文视觉重量协调 */
 html[lang="zh-CN"] .section-title,
 html[lang="zh-CN"] .publication-title,
@@ -199,7 +199,7 @@ html[lang="zh-CN"] .detail-hero h1,
 html[lang="zh-CN"] .about-copy h1,
 html[lang="zh-CN"] .prose h4,
 html[lang="zh-CN"] .home-hero-title {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 /* 中文正文整体适度加粗至 500（Noto Sans SC），与 Inter 英文正文视觉相称 */
@@ -904,7 +904,7 @@ html[lang="zh-CN"] .card p {
   .collection-title,
   .publication-title { font-size: clamp(40px, 9vw, 60px); }
   .collection-lede,
-  .publication-lede { font-size: 20px; }
+  .publication-lede { font-size: 22px; }
   .detail-hero { padding-top: 128px; }
   .detail-cover { order: -1; }
   .footer-inner { align-items: flex-start; }
@@ -1134,7 +1134,7 @@ html[lang="zh-CN"] .card p {
   margin: 0;
   color: var(--muted);
   font-family: var(--font-body);
-  font-size: clamp(17px, 1.4vw, 21px);
+  font-size: clamp(20px, 1.7vw, 25px);
   line-height: 1.6;
   letter-spacing: normal;
 }

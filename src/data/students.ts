@@ -15,8 +15,8 @@ export interface StudentMember {
 // --- Type config for each student group ---
 export const studentTypeConfig: Record<StudentType, { labelEn: string; labelZh: string; accent: string }> = {
   'phd':                { labelEn: 'Ph.D. Students',            labelZh: '博士研究生',       accent: '#b0aea5' },
-  'academic-master':    { labelEn: 'Academic Master\'s Students', labelZh: '学术型硕士研究生', accent: '#9a9a9a' },
-  'professional-master':{ labelEn: 'Professional Master\'s Students', labelZh: '专业型硕士研究生', accent: '#8a8a8a' },
+  'academic-master':    { labelEn: 'M.Phil. Students', labelZh: '学术型硕士研究生', accent: '#9a9a9a' },
+  'professional-master':{ labelEn: 'M.Med. Students', labelZh: '专业型硕士研究生', accent: '#8a8a8a' },
 };
 
 export const students: StudentMember[] = [
