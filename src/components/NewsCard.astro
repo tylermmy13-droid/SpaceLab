@@ -46,11 +46,14 @@ const isExternal = !!linkUrl;
   .news-card :global(h3) {
     font-family: var(--font-title);
     font-weight: 400;
-    font-size: clamp(17px, 1.4vw, 21px);
+    font-size: clamp(18px, 1.5vw, 23px);
     line-height: 1.35;
     letter-spacing: -0.01em;
     color: #141413;
     margin: 0 0 10px;
+  }
+  :global(html[lang="zh-CN"]) .news-card :global(h3) {
+    font-weight: 600;
   }
   :global(html[lang="en"]) .news-card :global(h3) {
     letter-spacing: 0.01em;
