@@ -85,7 +85,7 @@ const researchAreas = [
           <a class="leadership-card" href="/our-team/zhang-li/">
             <img src="/assets/team/zhangli.png" alt="张力 / ZHANG Li" loading="lazy" />
             <div>
-              <p class="leadership-name">张力 <span>ZHANG Li</span></p>
+              <p class="leadership-name"><strong class="leadership-name-zh">张力</strong><span>ZHANG Li</span></p>
               <p data-en="Vice President of Xinhua Hospital; Director of Cardiology; Distinguished Professor, Chief Physician, and Doctoral Supervisor." data-zh="新华医院副院长、心内科学科带头人，上海交通大学特聘教授、主任医师、博士生导师。">Vice President of Xinhua Hospital; Director of Cardiology; Distinguished Professor, Chief Physician, and Doctoral Supervisor.</p>
               <span class="text-link" data-en="Full profile →" data-zh="完整简介 →">Full profile →</span>
             </div>
@@ -93,7 +93,7 @@ const researchAreas = [
           <a class="leadership-card" href="/our-team/chen-qishan/">
             <img src="/assets/team/chenqishan.jpg" alt="陈齐山 / CHEN Qishan" loading="lazy" />
             <div>
-              <p class="leadership-name">陈齐山 <span>CHEN Qishan</span></p>
+              <p class="leadership-name"><strong class="leadership-name-zh">陈齐山</strong><span>CHEN Qishan</span></p>
               <p data-en="Deputy Director of Cardiovascular Medicine (Acting Director); Associate Chief Physician, Associate Researcher, and Doctoral Supervisor." data-zh="心血管内科副主任（主持工作），副主任医师、副研究员、博士生导师。">Deputy Director of Cardiovascular Medicine (Acting Director); Associate Chief Physician, Associate Researcher, and Doctoral Supervisor.</p>
               <span class="text-link" data-en="Full profile →" data-zh="完整简介 →">Full profile →</span>
             </div>
@@ -200,6 +200,11 @@ const researchAreas = [
     font-family: var(--font-title);
     font-size: 26px;
     line-height: 1.25;
+  }
+  .leadership-name-zh {
+    display: block;
+    font-family: "Source Han Serif CN Bold", "Noto Serif SC", "Songti SC", serif;
+    font-weight: 700;
   }
   .leadership-name span { display: block; margin-top: 4px; color: #6b6258; font-size: 14px; letter-spacing: 0.04em; }
   .about-research-section { padding-top: 58px; }
