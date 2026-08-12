@@ -1,19 +1,21 @@
 ---
 const { item } = Astro.props;
 const pubDate = item.data.pubDate.toISOString().split('T')[0];
-const paperUrl = item.data.paperUrl;
-const Tag = paperUrl ? 'a' : 'div';
+const paperUrl = item.data.paperSite ? `/publications/${item.id}/` : item.data.paperUrl;
+const Tag = paperUrl ? 'a' : 'article';
 const attrs: Record<string, any> = { class: 'card publication-card' };
 if (paperUrl) {
   attrs.href = paperUrl;
-  attrs.target = '_blank';
-  attrs.rel = 'noreferrer';
+  if (!item.data.paperSite) {
+    attrs.target = '_blank';
+    attrs.rel = 'noreferrer';
+  }
 }
 ---
 <!-- ===== 论文卡片组件 ===== -->
 <Tag {...attrs}>
   <span class="card-media">
-    <img class="card-image" src={item.data.image} alt="" loading="lazy" />
+    <img class="card-image" src={item.data.image} alt={item.data.title} loading="lazy" />
   </span>
   <div class="publication-card-body">
     <span class="tag-pill">{pubDate}</span>
@@ -27,10 +29,10 @@ if (paperUrl) {
   .publication-card {
     text-decoration: none;
     display: block;
-    border-radius: 14px;
+    border-radius: 18px;
     overflow: hidden;
     background: #e4dbcd;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
   }
   .publication-card:hover {
@@ -42,7 +44,7 @@ if (paperUrl) {
   .publication-card :global(.card-media) { margin: 0; border-radius: 0; }
   .publication-card :global(.card-image) { transition: transform 0.4s ease; }
   .publication-card:hover :global(.card-image) { transform: scale(1.07); }
-  .publication-card-body { padding: 20px 22px 24px; }
+  .publication-card-body { padding: 22px 24px 26px; }
   .publication-card :global(h3) {
     font-family: var(--font-title);
     font-weight: 400;

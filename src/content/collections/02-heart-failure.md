@@ -1,6 +1,6 @@
 ---
-title: "Myocardial injury, ventricular remodeling, and heart failure"
-titleZh: "心肌损伤、心室重构与心力衰竭"
+title: "Myocardial infarction, ventricular remodeling, and heart failure"
+titleZh: "心肌梗死、心室重构和心力衰竭的病理机制及转化研究"
 description: "Why some injured hearts recover, while others progress to failure."
 descriptionZh: "为何部分受损心脏能恢复，而另一部分进展为心力衰竭。"
 pubDate: 2026-07-02

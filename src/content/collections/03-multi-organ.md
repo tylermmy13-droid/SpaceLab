@@ -1,6 +1,6 @@
 ---
 title: "Cardiovascular multi-organ interactions"
-titleZh: "心血管多器官互作"
+titleZh: "心血管相关多器官互作的基础与转化研究"
 description: "How the heart and kidneys affect each other in health and disease."
 descriptionZh: "心脏与肾脏在健康与疾病中如何相互影响。"
 pubDate: 2026-07-03

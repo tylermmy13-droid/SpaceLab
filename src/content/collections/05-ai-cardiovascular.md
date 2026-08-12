@@ -1,6 +1,6 @@
 ---
-title: "Data science and AI for cardiovascular medicine"
-titleZh: "数据科学与人工智能心血管医学"
+title: "AI in cardiovascular diagnosis, treatment, and innovation"
+titleZh: "AI与心血管疾病诊治与创新"
 description: "Computational methods for imaging, risk prediction, and omics data."
 descriptionZh: "应用于影像、风险预测与组学数据的计算方法。"
 pubDate: 2026-07-05

@@ -1,6 +1,6 @@
 ---
-title: "Vascular injury, repair, and remodeling"
-titleZh: "血管损伤、修复与重构"
+title: "Vascular regeneration, repair, and remodeling"
+titleZh: "血管再生修复和重构机制及干预研究"
 description: "How blood vessels respond to injury, and why repair sometimes fails."
 descriptionZh: "血管如何应对损伤，以及修复为何有时会失败。"
 pubDate: 2026-07-01

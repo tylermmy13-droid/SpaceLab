@@ -23,7 +23,7 @@ const sourceHtml = fs.readFileSync(templatePath, 'utf8');
 const headContent = sourceHtml.match(/<head[^>]*>([\s\S]*?)<\/head>/i)?.[1] ?? '';
 const bodyContent = sourceHtml.match(/<body[^>]*>([\s\S]*?)<\/body>/i)?.[1] ?? sourceHtml;
 
-const rewriteAssetPaths = (html) => html
+const rewriteAssetPaths = (html: string) => html
   .replace(/(["'(])\.\/static\//g, `$1${publicBase}static/`)
   .replace(/(["'(])static\//g, `$1${publicBase}static/`)
   .replace(/(["'(])\.\/figs\//g, `$1${publicBase}figs/`)

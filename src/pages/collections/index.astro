@@ -25,7 +25,7 @@ const collectionItems = (await getCollection('collections'))
             return (
               <a class="direction-card" href={`/collections/${item.id}/`}>
                 <div class="direction-card-media">
-                  <img src={item.data.image} alt="" loading="lazy" />
+                  <img src={item.data.image} alt={item.data.titleZh} loading="lazy" />
                   <span class="direction-card-number" aria-hidden="true">{num}</span>
                 </div>
                 <div class="direction-card-body">

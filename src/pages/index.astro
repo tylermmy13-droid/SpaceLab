@@ -9,11 +9,11 @@ import CollectionCard from '../components/CollectionCard.astro';
 
 const newsItems = (await getCollection('news')).filter((item) => !item.data.draft).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 3);
 const publications = (await getCollection('publications')).filter((item) => !item.data.draft).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 3);
-const collectionItems = (await getCollection('collections')).filter((item) => !item.data.draft).sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()).slice(0, 3);
+const collectionItems = (await getCollection('collections')).filter((item) => !item.data.draft).sort((a, b) => a.data.pubDate.valueOf() - b.data.pubDate.valueOf()).slice(0, 3);
 ---
 <!-- ===== 首页 ===== -->
 <!-- 展示首页首屏与最新三条新闻、研究方向、论文 -->
-<BaseLayout title="Zhang Lab" description="Clinical cardiology, vascular biology, and translational research at Xinhua Hospital." headerMode="glass" bodyClass="home-warm">
+<BaseLayout title="Zhang Lab | Xinhua Hospital" description="The Zhang Li and Qishan Chen Research Group conducts cardiovascular and translational research at Xinhua Hospital." headerMode="glass" bodyClass="home-warm">
   <main class="home-page">
     <HomeHero />
 

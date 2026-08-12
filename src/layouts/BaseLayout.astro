@@ -17,8 +17,12 @@ const {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta name="theme-color" content="#f2f0e9" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="Zhang Lab" />
     <title>{title}</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
     <!-- DNS prefetch & preconnect for Google Fonts (CJK subset delivery) -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
@@ -36,15 +40,16 @@ const {
     <link rel="preload" href="/assets/fonts/dm-serif-display-latin-400-normal.ttf" as="font" type="font/ttf" crossorigin />
     <link rel="preload" href="/assets/fonts/SourceHanSerifCN-Bold.otf" as="font" type="font/otf" crossorigin />
 
-    <script src="/assets/js/i18n.js" defer></script>
+    <script is:inline src="/assets/js/i18n.js" defer></script>
   </head>
   <body class={bodyClass}>
     <!-- Skip-to-content for keyboard accessibility -->
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <a class="skip-link" href="#main-content" data-en="Skip to main content" data-zh="跳至主要内容">Skip to main content</a>
 
     <header class={`site-header ${headerMode === 'glass' ? 'is-visible' : ''}`} data-scroll-header data-header-mode={headerMode}>
       <nav class="nav" aria-label="Main navigation" role="navigation">
         <a href="/" data-route="home" data-en="Home" data-zh="首页">Home</a>
+        <a href="/about/" data-route="about" data-en="About" data-zh="关于">About</a>
         <a href="/news/" data-route="news" data-en="News" data-zh="动态">News</a>
         <a href="/collections/" data-route="collections" data-en="Research" data-zh="研究方向">Research</a>
         <a href="/our-team/" data-route="our-team" data-en="Team" data-zh="团队">Team</a>
@@ -52,24 +57,19 @@ const {
         <a href="/contact/" data-route="contact" data-en="Contact" data-zh="联系我们">Contact</a>
       </nav>
     </header>
-    <main id="main-content">
+    <div id="main-content">
       <slot />
-    </main>
+    </div>
     <div class="floating-lang">
       <LangSwitch />
     </div>
     <footer class="footer" role="contentinfo">
-      <div class="footer-illustration" aria-hidden="true">
-        <img class="footer-illustration-image" src="/assets/footer/footer.png" alt="" loading="lazy" />
-      </div>
       <div class="container footer-inner">
-        <span>@2026 Zhang Lab</span>
-        <span class="footer-note" data-en="Cardiovascular medicine, vascular biology, organoid and organ-on-chip models, and data-driven research." data-zh="心血管医学、血管生物学、类器官与器官芯片模型及数据驱动研究。">
-          Cardiovascular medicine, vascular biology, organoid and organ-on-chip models, and data-driven research.
+        <span>© 2026 Zhang Lab</span>
+        <span class="footer-note" data-en="Xinhua Hospital Affiliated to Shanghai Jiao Tong University School of Medicine" data-zh="上海交通大学医学院附属新华医院">
+          Xinhua Hospital Affiliated to Shanghai Jiao Tong University School of Medicine
         </span>
-        <span class="footer-credit">
-          Template by <a href="https://github.com/choucisan/SpaceLab" target="_blank" rel="noreferrer">SpaceLab</a>
-        </span>
+        <a class="footer-credit" href="/contact/" data-en="Contact" data-zh="联系我们">Contact</a>
       </div>
     </footer>
     <script>
@@ -78,30 +78,13 @@ const {
       const pageSeg = segs[0] === 'ZhangLab'
         ? (segs[1] || 'home')
         : (segs[0] || 'home');
-      document.querySelectorAll('.nav a').forEach(a => {
+      document.querySelectorAll<HTMLAnchorElement>('.nav a').forEach(a => {
         if ((a.dataset.route || '') === pageSeg) a.classList.add('active');
       });
 
-      /* ---- Nav mode: About page uses dark/light switch, others use light ---- */
-      const header = document.querySelector('[data-scroll-header]');
-      const aboutPage = document.querySelector('[data-about-page]');
-
-      if (aboutPage) {
-        header?.classList.add('on-dark');
-        const updateNavAbout = () => {
-          if (!header) return;
-          if (window.scrollY < 120) {
-            header.classList.add('on-dark');
-            header.classList.remove('on-light');
-          } else {
-            header.classList.remove('on-dark');
-            header.classList.add('on-light');
-          }
-        };
-        window.addEventListener('scroll', updateNavAbout, { passive: true });
-      } else {
-        header?.classList.add('on-light');
-      }
+      /* ---- Default navigation contrast; the home hero adjusts it on scroll ---- */
+      const header = document.querySelector<HTMLElement>('[data-scroll-header]');
+      header?.classList.add('on-light');
 
       /* ---- Scroll-driven header visibility ---- */
       const updateHeaderVisibility = () => {

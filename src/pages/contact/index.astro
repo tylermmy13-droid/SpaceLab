@@ -24,7 +24,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
           </span>
         </a>
 
-        <a class="contact-pill" href="mailto:chenqishan@shsmu.edu.cn" aria-label="Email chenqishan@shsmu.edu.cn">
+        <a class="contact-pill" href="mailto:lastufo@hotmail.com" aria-label="Email lastufo@hotmail.com">
           <span class="contact-pill-name">陈齐山 / CHEN Qishan</span>
           <span class="contact-pill-email">
             <svg class="contact-pill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -45,6 +45,14 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
             susannayang@126.com
           </span>
         </a>
+
+        <div class="institution-card">
+          <p class="institution-label" data-en="Affiliation" data-zh="依托单位">Affiliation</p>
+          <h2 data-en="Xinhua Hospital Affiliated to Shanghai Jiao Tong University School of Medicine" data-zh="上海交通大学医学院附属新华医院">Xinhua Hospital Affiliated to Shanghai Jiao Tong University School of Medicine</h2>
+          <p data-en="1665 Kongjiang Road, Yangpu District, Shanghai 200092, China" data-zh="上海市杨浦区控江路1665号，邮编200092">1665 Kongjiang Road, Yangpu District, Shanghai 200092, China</p>
+          <p data-en="Hospital switchboard: +86 21 2507 8999" data-zh="医院总机：021-2507 8999">Hospital switchboard: +86 21 2507 8999</p>
+          <a href="https://www.xinhuamed.com.cn/" target="_blank" rel="noreferrer" data-en="Visit the official hospital website →" data-zh="访问新华医院官方网站 →">Visit the official hospital website →</a>
+        </div>
       </div>
     </section>
   </main>
@@ -57,7 +65,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    max-width: 620px;
+    max-width: 760px;
     margin: 0 auto;
   }
   .contact-pill {
@@ -115,6 +123,33 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
     transition: opacity 0.2s;
   }
   .contact-pill:hover .contact-pill-icon { opacity: 1; }
+  .institution-card {
+    width: 100%;
+    margin-top: 22px;
+    padding: 34px;
+    border: 1px solid rgba(20, 20, 19, 0.08);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.34);
+    text-align: center;
+  }
+  .institution-label {
+    margin: 0 0 12px;
+    color: #6b6258;
+    font-size: 12px;
+    font-weight: 650;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+  }
+  .institution-card h2 {
+    max-width: 640px;
+    margin: 0 auto 16px;
+    font-family: var(--font-title);
+    font-size: clamp(25px, 3vw, 36px);
+    font-weight: 400;
+    line-height: 1.25;
+  }
+  .institution-card p:not(.institution-label) { margin: 6px 0; color: #59534d; line-height: 1.6; }
+  .institution-card a { display: inline-flex; margin-top: 18px; color: #315f91; font-weight: 650; }
   @media (max-width: 640px) {
     .contact-pill { padding: 20px 20px 24px; }
     .contact-pill-name { font-size: 17px; }

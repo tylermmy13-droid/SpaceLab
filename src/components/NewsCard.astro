@@ -13,13 +13,13 @@ const isExternal = !!linkUrl;
   rel={isExternal ? 'noreferrer' : undefined}
 >
   <span class="card-media">
-    <img class="card-image" src={item.data.image} alt="" loading="lazy" />
+    <img class="card-image" src={item.data.image} alt={item.data.titleZh || item.data.title} loading="lazy" />
   </span>
   <div class="news-card-body">
     <span class="tag-pill">{pubDate}</span>
     <h3 class="news-card-title" data-en={item.data.title} data-zh={item.data.titleZh || item.data.title}>{item.data.title}</h3>
     <p data-en={item.data.description} data-zh={item.data.descriptionZh || item.data.description}>{item.data.description}</p>
-    <span class="card-meta">{pubDate}</span>
+    {item.data.tags?.[0] && <span class="card-meta">{item.data.tags[0]}</span>}
   </div>
 </a>
 
@@ -27,10 +27,10 @@ const isExternal = !!linkUrl;
   .news-card {
     text-decoration: none;
     display: block;
-    border-radius: 14px;
+    border-radius: 18px;
     overflow: hidden;
     background: #e4dbcd;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
   }
   .news-card:hover {
@@ -42,7 +42,7 @@ const isExternal = !!linkUrl;
   .news-card :global(.card-media) { margin: 0; border-radius: 0; }
   .news-card :global(.card-image) { transition: transform 0.4s ease; }
   .news-card:hover :global(.card-image) { transform: scale(1.07); }
-  .news-card-body { padding: 20px 22px 24px; }
+  .news-card-body { padding: 22px 24px 26px; }
   .news-card :global(h3) {
     font-family: var(--font-title);
     font-weight: 400;

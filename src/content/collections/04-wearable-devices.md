@@ -1,6 +1,6 @@
 ---
-title: "Wearable cardiovascular monitoring and digital health"
-titleZh: "可穿戴心血管监测与数字健康"
+title: "Wearable devices and proactive cardiovascular health"
+titleZh: "主动健康可穿戴设备医工交叉研究"
 description: "Sensors and methods for continuous cardiovascular monitoring."
 descriptionZh: "用于心血管连续监测的传感器与方法。"
 pubDate: 2026-07-04
