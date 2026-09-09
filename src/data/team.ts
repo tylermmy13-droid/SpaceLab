@@ -201,7 +201,7 @@ export const team: TeamMember[] = [
   },
 
   // ════════════════════════════════════════════
-  // Level 3 — 主治医师 / 助理研究员
+  // Level 3 — 主治医师、助理研究员、高年资博士后
   // ════════════════════════════════════════════
   {
     slug: 'yang-mei',
@@ -304,7 +304,7 @@ export const team: TeamMember[] = [
   },
 
   // ════════════════════════════════════════════
-  // Level 3 — 主治医师 / 助理研究员 (continued)
+  // Level 3 — 主治医师、助理研究员、博士后 (continued)
   // ════════════════════════════════════════════
   {
     slug: 'xu-xiaolei',
@@ -366,6 +366,21 @@ export const team: TeamMember[] = [
     honors: [],
     honorsZh: [],
   },
+  {
+    slug: 'zhang-run',
+    name: '章润 / ZHANG Run',
+    nameZh: '章润',
+    role: 'Postdoctoral Fellow',
+    roleZh: '博士后',
+    level: 3,
+    img: '',
+    desc: 'Postdoctoral Fellow focusing on clinical management of cardiovascular diseases.',
+    descZh: '博士后，致力于心血管医学研究和临床工作。',
+    email: '',
+    publications: [],
+    honors: [],
+    honorsZh: [],
+   },
 
   // ════════════════════════════════════════════
   // Level 4 — 住院医师
@@ -441,6 +456,21 @@ export const team: TeamMember[] = [
         links: [{ label: 'Cardiovascular Research', url: 'https://doi.org/10.1093/cvr/cvaf084' }],
       },
     ],
+    honors: [],
+    honorsZh: [],
+  },
+  {
+    slug: 'zhou-meng',
+    name: '周萌 / ZHOU Meng',
+    nameZh: '周萌',
+    role: 'Resident Physician',
+    roleZh: '住院医师',
+    level: 4,
+    img: '',
+    desc: 'Resident Physician engaged in clinical cardiology training and research.',
+    descZh: '住院医师，致力于心血管医学研究和临床工作。',
+    email: '',
+    publications: [],
     honors: [],
     honorsZh: [],
   },

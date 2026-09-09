@@ -20,19 +20,18 @@ export const studentTypeConfig: Record<StudentType, { labelEn: string; labelZh: 
 };
 
 export const students: StudentMember[] = [
-  // ─── Ph.D. Students ───
-  { slug: 'zhou-meng',    name: '周萌 / ZHOU Meng',     nameZh: '周萌',   type: 'phd', enrollmentYear: '2022' },
-  { slug: 'zhang-run',    name: '章润 / ZHANG Run',     nameZh: '章润',   type: 'phd', enrollmentYear: '2023' },
+  // ─── Ph.D. Students ───,
   { slug: 'wang-leyu',    name: '王乐禹 / WANG Leyu',    nameZh: '王乐禹',  type: 'phd', enrollmentYear: '2022' },
   { slug: 'li-qianyi',    name: '李千一 / LI Qianyi',   nameZh: '李千一',  type: 'phd', enrollmentYear: '2025' },
   { slug: 'chen-zixuan',  name: '陈子璇 / CHEN Zixuan',  nameZh: '陈子璇',  type: 'phd', enrollmentYear: '2025' },
   { slug: 'zhou-xiaoyue', name: '周晓月 / ZHOU Xiaoyue', nameZh: '周晓月',  type: 'phd', enrollmentYear: '2023' },
-  { slug: 'chai-ke',      name: '柴珂 / CHAI Ke',        nameZh: '柴珂',   type: 'phd', enrollmentYear: '2024' },
+  { slug: 'chai-ke',      name: '柴珂（致远荣誉计划) / CHAI Ke (Zhiyuan Honors Program)',        nameZh: '柴珂',   type: 'phd', enrollmentYear: '2024' },
   { slug: 'kong-deao',    name: '孔德澳 / KONG Deao',   nameZh: '孔德澳',  type: 'phd', enrollmentYear: '2024' },
   { slug: 'wu-xiaoang',   name: '吴骁昂 / WU Xiaoang',   nameZh: '吴骁昂',  type: 'phd', enrollmentYear: '2024' },
   { slug: 'zhang-han',    name: '张晗 / ZHANG Han',     nameZh: '张晗',   type: 'phd', enrollmentYear: '2025' },
   { slug: 'zhao-yiheng',    name: '赵屹珩 / ZHAO Yiheng',     nameZh: '赵屹珩',   type: 'phd', enrollmentYear: '2026' },
-  { slug: '周欣悦',    name: '周欣悦 / ZHOU Xinyue',     nameZh: '周欣悦',   type: 'phd', enrollmentYear: '2026' },
+  { slug: 'zhou-xinyue',    name: '周欣悦（致远荣誉计划) / ZHOU Xinyue (Zhiyuan Honors Program)',     nameZh: '周欣悦',   type: 'phd', enrollmentYear: '2026' },
+  { slug: 'zheng-zifei',    name: '郑紫飞（海南专项） / ZHENG Zifei (Hainan Special Program)',     nameZh: '郑紫飞',   type: 'phd', enrollmentYear: '2026' },
 
 
   // ─── Academic Master's Students ───
