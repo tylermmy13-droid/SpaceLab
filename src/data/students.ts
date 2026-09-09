@@ -42,7 +42,6 @@ export const students: StudentMember[] = [
   { slug: 'ding-yinuo',  name: '丁一诺 / DING Yinuo', nameZh: '丁一诺', type: 'academic-master', enrollmentYear: '2025' },
 
   // ─── Professional Master's Students ───
-  { slug: 'li-yunqing',   name: '李云轻 / LI Yunqing',   nameZh: '李云轻', type: 'professional-master', enrollmentYear: '2024' },
   { slug: 'yang-weiqi',   name: '杨惟琪 / YANG Weiqi',   nameZh: '杨惟琪', type: 'professional-master', enrollmentYear: '2024' },
   { slug: 'he-yixin',     name: '何怡心 / HE Yixin',     nameZh: '何怡心', type: 'professional-master', enrollmentYear: '2025' },
 ];
