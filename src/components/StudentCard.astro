@@ -27,6 +27,11 @@ const roleLabel = typeLabels[student.type] ?? { en: '', zh: '' };
     <span class="student-card-role" style={`background: ${accent}18`} data-en={roleLabel.en} data-zh={roleLabel.zh}>
       {roleLabel.zh}
     </span>
+    {student.program && (
+      <span class="student-card-role student-card-program" data-en={student.program} data-zh={student.programZh || student.program}>
+        {student.programZh || student.program}
+      </span>
+    )}
     <p class="student-card-enrollment" data-en={`Enrolled ${student.enrollmentYear}`} data-zh={`${student.enrollmentYear}级`}>
       {student.enrollmentYear}级
     </p>
@@ -103,6 +108,11 @@ const roleLabel = typeLabels[student.type] ?? { en: '', zh: '' };
     font-weight: 500;
     letter-spacing: 0.02em;
     color: #141413 !important;
+  }
+  .student-card-program {
+    margin-top: 2px;
+    color: #d97757 !important;
+    background: rgba(217, 119, 87, 0.12);
   }
   .student-card-enrollment {
     margin: 3px 0 0;
