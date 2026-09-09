@@ -28,7 +28,7 @@ const roleLabel = typeLabels[student.type] ?? { en: '', zh: '' };
       {roleLabel.zh}
     </span>
     {student.program && (
-      <span class="student-card-role student-card-program" data-en={student.program} data-zh={student.programZh || student.program}>
+      <span class={`student-card-role student-card-program${student.program === 'Hainan Special Program' ? ' is-blue' : ''}`} data-en={student.program} data-zh={student.programZh || student.program}>
         {student.programZh || student.program}
       </span>
     )}
@@ -113,6 +113,10 @@ const roleLabel = typeLabels[student.type] ?? { en: '', zh: '' };
     margin-top: 2px;
     color: #d97757 !important;
     background: rgba(217, 119, 87, 0.12);
+  }
+  .student-card-program.is-blue {
+    color: #6a9bcc !important;
+    background: rgba(106, 155, 204, 0.12);
   }
   .student-card-enrollment {
     margin: 3px 0 0;
